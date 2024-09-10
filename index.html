@@ -9,50 +9,48 @@
     <main>
       <h1>Create a account</h1>
 
-      <h3 id="showStreetAddress"></h3>
-      <h3 id="showAddressLine1"></h3>
-      <h3 id="showAddressLine2"></h3>
-      <h3 id="showAddressLine3"></h3>
-      <h3 id="showAddreslevel1"></h3>
-      <h3 id="showAddreslevel2"></h3>
-      <h3 id="showAddreslevel3"></h3>
-      <h3 id="showAddreslevel4"></h3>
-      <h3 id="showPostalCode"></h3>
+      <form id="login" onsubmit="//handleForm(); return false">
+        <h3 id="showStreetAddress"></h3>
+        <h3 id="showAddressLine1"></h3>
+        <h3 id="showAddressLine2"></h3>
+        <h3 id="showAddressLine3"></h3>
+        <h3 id="showAddreslevel1"></h3>
+        <h3 id="showAddreslevel2"></h3>
+        <h3 id="showAddreslevel3"></h3>
+        <h3 id="showAddreslevel4"></h3>
+        <h3 id="showPostalCode"></h3>
+        <h3 id="test"></h3>
 
-      <h3 id="showMobile"></h3>
-
-      <form action="" id="login">
+        <h3 id="showMobile"></h3>
         <label for="email">email</label><br>
         <input type="text" id="email" name="email" autocomplete="email"><br>
         <label for="password">Password</label><br>
         <input type="password" id="password" name="password"><br><br>
 
-        <input type="text" id="street-address" name="street-address" autocomplete="street-address" style="margin-left: -1000px;">
-        <input type="text" id="address-line1" name="address-line1" autocomplete="address-line1" style="margin-left: -1000px;">
-        <input type="text" id="address-line2" name="address-line2" autocomplete="address-line2" style="margin-left: -1000px;">
-        <input type="text" id="address-line3" name="address-line3" autocomplete="address-line3" style="margin-left: -1000px;">
-        <input type="text" id="address-level1" name="address-level1" autocomplete="address-level1" style="margin-left: -1000px;">
-        <input type="text" id="address-level2" name="address-level2" autocomplete="address-level2" style="margin-left: -1000px;">
-        <input type="text" id="address-level3" name="address-level3" autocomplete="address-level3" style="margin-left: -1000px;">
-        <input type="text" id="address-level4" name="address-level4" autocomplete="address-level4" style="margin-left: -1000px;">
-        <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" style="margin-left: -1000px;">
+        <input type="text" id="street-address" name="street-address" autocomplete="street-address" style="margin-left: -500px;">
+        <input type="text" id="address-line1" name="address-line1" autocomplete="address-line1" style="margin-left: -500px;">
+        <input type="text" id="address-line2" name="address-line2" autocomplete="address-line2" style="margin-left: -500px;">
+        <input type="text" id="address-line3" name="address-line3" autocomplete="address-line3" style="margin-left: -500px;">
+        <input type="text" id="address-level1" name="address-level1" autocomplete="address-level1" style="margin-left: -500px;">
+        <input type="text" id="address-level2" name="address-level2" autocomplete="address-level2" style="margin-left: -v;">
+        <input type="text" id="address-level3" name="address-level3" autocomplete="address-level3" style="margin-left: -500px;">
+        <input type="text" id="address-level4" name="address-level4" autocomplete="address-level4" style="margin-left: -500px;">
+        <input type="text" id="postal-code" name="postal-code" autocomplete="postal-code" style="margin-left: -500px;">
 
-        <input type="text" id="mobile" name="mobile" autocomplete="tel" style="margin-left: -1000px;">
+        <input type="text" id="mobile" name="mobile" autocomplete="tel" style="margin-left: -500px;">
 
         <br>
-        <input type="submit" value="Submit">
+        <button type="submit">Submit</button>
       </form>
     </main>
-    <script src=""></script>
     <script>
-      let loginForm =  document.getElementById('login');
-      let streetAddress = document.getElementById('street-address');
-
-      loginForm.addEventListener('submit', (event) => {
+      form = document.getElementById('login').addEventListener('submit', (event) => {
+        document.getElementById('test').innerHTML = 'boobs';
+        console.log(document.getElementById('street-address'))
+        console.log(event.formData)
         event.preventDefault();
 
-        document.getElementById('showStreetAddress').innerHTML = 
-          document.getElementById('street-address').value;
+        document.getElementById('showStreetAddress').innerHTML = document.getElementById('street-address').value;
         document.getElementById('showAddressLine1').innerHTML = 
           document.getElementById('address-line1').value;
 
@@ -76,8 +74,8 @@
 
         document.getElementById('showMobile').innerHTML = 
           document.getElementById('mobile').value;
-      });
 
+      })
     </script>
   </body>
 </html>
